@@ -541,7 +541,7 @@ function send(yes,show){
   if(problem){ if(show){err.textContent=problem;err.style.display='block'} return '' }
   if(show) err.style.display='none';
   var num=String(r.whatsapp||'').replace(/\D/g,'');
-  if(!num){ if(show){err.textContent='RSVP isn't open yet. Please check back soon.';err.style.display='block'} return '' }
+  if(!num){ if(show){err.textContent='RSVP isn’t open yet. Please check back soon.';err.style.display='block'} return '' }
   var tpl = yes ? r.yesTemplate : r.noTemplate;
   var text = tpl.replace(/\{name\}/g,name).replace(/\{guests\}/g,String(guestCount))
     .replace(/\{days\}/g, days.length? days.join(', ') : '—')
